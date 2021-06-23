@@ -1,5 +1,5 @@
 ASM = nasm
-ASM_FLAGS = -f elf64 -g -F dwarf
+ASM_FLAGS = -f elf64 -g -F dwarf -l hello_world.lst
 OBJ_MODULES = hello_world.o
 PROGRAM = prog
 
@@ -14,7 +14,7 @@ $(PROGRAM): $(OBJ_MODULES)
 
 
 clean:
-	rm -f $(PROGRAM) $(OBJ_MODULES)
+	rm -f $(PROGRAM) $(OBJ_MODULES) *.lst
 	
 
 run: $(PROGRAM)
