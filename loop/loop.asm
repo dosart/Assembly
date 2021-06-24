@@ -19,12 +19,13 @@ main:
     while_loop:
         ;sum = sum + i
         add rax, rcx
-        ;i += 1
+        ;i = i + 1
         inc rcx
         cmp rcx, rbx
         jle while_loop
     
     print_message:
+        ;printf("The sum of 0 to %ld is %ld", rbx, rcs)
         mov rdi, message
         mov rsi, rbx
         mov rdx, rax
