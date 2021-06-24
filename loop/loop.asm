@@ -19,6 +19,7 @@ main:
     while_loop:
         ;sum = sum + i
         add rax, rcx
+        ;i += 1
         inc rcx
         cmp rcx, rbx
         jle while_loop
